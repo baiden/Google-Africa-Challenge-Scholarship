@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/feed" />
+
+        <LinearLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="158dp"
+            android:layout_margin="25dp"
+            android:padding="8dp"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:src="@drawable/coffee"
+                android:layout_marginLeft="22dp"
+                android:layout_gravity="center_vertical"
+                android:adjustViewBounds="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="ALC\nCoffee :)"
+                android:textStyle="bold"
+                android:layout_marginRight="22dp"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/name_text_input"
+            android:layout_height="wrap_content"
+            android:layout_width="315dp"
+            android:inputType="text"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            app:fontFamily="@font/fira_mono"
+            android:layout_below="@id/title_layout"
+            android:hint="Name"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/toppings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="50dp"
+            android:text="@string/toppings"
+            android:textAllCaps="true"
+            android:layout_below="@id/title_layout"
+            app:fontFamily="@font/fira_mono"
+            android:textColor="#000"/>
+
+        <CheckBox
+            android:id="@+id/whipped_cream_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="50dp"
+            android:layout_below="@id/title_layout"
+            android:textSize="16sp"
+            app:fontFamily="@font/fira_mono"
+            android:paddingLeft="24dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:text="Whipped cream"/>
+
+        <CheckBox
+            android:id="@+id/chocolate_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="125dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="50dp"
+            android:layout_below="@id/title_layout"
+            android:textSize="16sp"
+            app:fontFamily="@font/fira_mono"
+            android:paddingLeft="24dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:text="@string/chocolate"/>
+
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="190dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="50dp"
+            android:text="@string/quantity"
+            android:textAllCaps="true"
+            android:layout_below="@id/title_layout"
+            app:fontFamily="@font/fira_mono"
+            android:textColor="#000"/>
+
+        <LinearLayout
+            android:id="@+id/quantity_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_below="@id/title_layout"
+            android:layout_marginTop="190dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="decrement"
+                android:text="-"
+                android:textColor="#fff"
+                android:background="#004D40"
+                android:layout_marginLeft="8dp"/>
+
+            <TextView
+                android:id="@+id/quantity_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="1"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="8dp"
+                android:onClick="increment"
+                android:text="+"
+                android:textColor="#fff"
+                android:background="#004D40"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order"
+            android:layout_below="@id/quantity_layout"
+            android:layout_marginLeft="50dp"
+            app:fontFamily="@font/fira_mono"
+            android:layout_marginTop="70dp"/>
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="50dp"
+            android:onClick="submitOrder"
+            android:layout_below="@id/quantity_layout"
+            android:text=""
+            android:background="@android:color/transparent"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+</ScrollView>
