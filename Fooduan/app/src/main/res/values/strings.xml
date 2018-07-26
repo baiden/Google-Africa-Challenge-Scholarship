@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Fooduan</string>
+    <string name="fooduan">Fooduan Contact</string>
+
+    <string name="business_name">Fooduan</string>
+    <string name="number">+233(0)26 548 2325</string>
+    <string name="imageofudacity">imageOfUdacity</string>
+    <string name="contact_us">Contact Us :)</string>
+    <string name="feedback">We\'ll love to hear from you</string>
+    <string name="burgers_hotdogs_more">Burgers + Hotdogs + More</string>
+    <string name="facebook_handle">Fooduan Burgers &amp; Hotdogs</string>
+    <string name="hours_of_operation">Monday - Friday | 10am - 4pm</string>
+    <string name="burger_icon">burger icon</string>
+</resources>
